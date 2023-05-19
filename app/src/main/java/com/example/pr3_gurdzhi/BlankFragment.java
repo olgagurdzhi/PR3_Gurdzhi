@@ -57,5 +57,85 @@ public class BlankFragment extends Fragment {
         ImageView image = view.findViewById(R.id.img);
         image.setImageDrawable(getResources().getDrawable(R.drawable.ic_launcher_background));
 
+        Log.d(TAG, "onViewCreated");
+        Toast.makeText(context, "onViewCreated", duration).show();
+
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+    }
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView");
+        Toast.makeText(context, "onCreateView", duration).show();
+        return null;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroyView");
+        Toast.makeText(context, "onDestroyView", duration).show();
+    }
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        context = getContext();
+        Log.d(TAG, "onCreate");
+        Toast.makeText(context, "onCreate", duration).show();
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d(TAG, "onActivityCreated");
+        Toast.makeText(context, "onActivityCreated", duration).show();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+        Toast.makeText(context, "onStart", duration).show();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume");
+        Toast.makeText(context, "onResume", duration).show();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause");
+        Toast.makeText(context, "onPause", duration).show();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
+        Toast.makeText(context, "onStop", duration).show();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy");
+        Toast.makeText(context, "onDestroy", duration).show();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d(TAG, "onDetach");
+        Toast.makeText(context, "onDetach", duration).show();
     }
 }
+
